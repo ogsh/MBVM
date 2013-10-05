@@ -21,11 +21,11 @@ public:
     Pay();
     Pay& AddDeposit(MoneyType::typeID money_type);
     bool MakePayment(int price);
+    int GetDeposit() const;
     
     void Refund();
     
 private:
-    
     static int moneys[4];
     map<MoneyType::typeID, MoneyBag> money_bags;
 };

@@ -12,16 +12,28 @@
 #include <iostream>
 #include "DaoRecipe.h"
 
+using namespace std;
+
 class Recipe {
 public:
-    Recipe(const RECIPE_INFO& recipe_info);
+    Recipe(CoffeeType::typeID coffee_type);
     Recipe(const Recipe& obj);
     
     Recipe& operator=(const Recipe& obj);
     
+    friend ostream& operator<<(ostream& os, const Recipe& obj) {
+        os << "bean: " << obj.recipe_info.bean << endl;
+        os << "milk: " << obj.recipe_info.milk << endl;
+        os << "sugar: " << obj.recipe_info.sugar << endl;
+        os << "water: " << obj.recipe_info.water << endl;
+        
+        return os;
+    }
+    
+    void Supply();
+    
 private:
-    int i1;
-    int i2;
+    RECIPE_INFO recipe_info;
 };
 
 

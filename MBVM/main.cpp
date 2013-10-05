@@ -7,12 +7,47 @@
 //
 
 #include <iostream>
+#include "CSV.h"
+#include "Sale.h"
+
+
+using namespace std;
+
+void Test_csv(const string& fname);
+void Test_case1();
 
 int main(int argc, const char * argv[])
 {
-//ll
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    DaoRecipe::Initialize("recipe.csv");
+
+    Test_case1();
     return 0;
 }
 
+void Test_case1() {
+    Sale sale;
+    
+    sale.ShowItems();
+
+    MoneyType::typeID moneys[] = {
+        MoneyType::MONEY10,
+        MoneyType::MONEY100,
+        MoneyType::MONEY10
+    };
+    
+    for(int i=0; i < sizeof(moneys) / sizeof(MoneyType::typeID); ++i) {
+        sale.DropInCoin(moneys[i]);
+    }
+    
+    
+    sale.SelectItem(CoffeeType::MARUKO);
+    sale.SelectItem(CoffeeType::SPECIAL);
+    sale.SelectItem(CoffeeType::CAPPUCCINO);
+}
+
+void Test_csv(const string& fname) {
+    
+    CSV csv (fname);
+    
+    cout << csv;
+}

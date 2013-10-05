@@ -8,16 +8,19 @@
 
 #include "Recipe.h"
 
-Recipe::Recipe(const RECIPE_INFO& recipe_info) : i1(recipe_info.i1), i2(recipe_info.i2) {
+Recipe::Recipe(CoffeeType::typeID coffee_type) : recipe_info(DaoRecipe::Get(coffee_type)) {
     
 }
 
-Recipe::Recipe(const Recipe& obj) : i1(obj.i1), i2(obj.i2) {
+Recipe::Recipe(const Recipe& obj) : recipe_info(obj.recipe_info) {
     
 }
 
 Recipe& Recipe::operator=(const Recipe& obj) {
-    this->i1 = obj.i1;
-    this->i2 = obj.i2;
+    this->recipe_info = obj.recipe_info;
     return *this;
+}
+
+void Recipe::Supply() {
+    cout << "作ります" << endl;
 }

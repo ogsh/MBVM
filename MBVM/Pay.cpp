@@ -52,3 +52,14 @@ void Pay::Refund() {
         std::cout << itr->second << std::endl;
     }
 }
+
+int Pay::GetDeposit() const {
+    int deposit = 0;
+    map<MoneyType::typeID, MoneyBag>::const_iterator itr = this->money_bags.begin();
+
+    for(; itr != this->money_bags.end(); ++itr) {
+        deposit += itr->second.GetValue();
+    }
+    
+    return deposit;
+}

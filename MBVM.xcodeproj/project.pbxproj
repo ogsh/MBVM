@@ -12,6 +12,9 @@
 		60156D4617FFD52B001394E7 /* MoneyBag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60156D4017FFD52B001394E7 /* MoneyBag.cpp */; };
 		60156D4717FFD52B001394E7 /* Pay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60156D4217FFD52B001394E7 /* Pay.cpp */; };
 		60156D4817FFD52B001394E7 /* Recipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60156D4417FFD52B001394E7 /* Recipe.cpp */; };
+		60156D5517FFEF75001394E7 /* Item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60156D5317FFEF75001394E7 /* Item.cpp */; };
+		60156D5717FFF211001394E7 /* DaoRecipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60156D5617FFF211001394E7 /* DaoRecipe.cpp */; };
+		60156D5B17FFF3DD001394E7 /* Sale.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60156D5917FFF3DD001394E7 /* Sale.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +41,15 @@
 		60156D4317FFD52B001394E7 /* Pay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pay.h; sourceTree = "<group>"; };
 		60156D4417FFD52B001394E7 /* Recipe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Recipe.cpp; sourceTree = "<group>"; };
 		60156D4517FFD52B001394E7 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		60156D4E17FFD72D001394E7 /* IO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IO.h; sourceTree = "<group>"; };
+		60156D4F17FFD7F6001394E7 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		60156D5117FFD89C001394E7 /* CSV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSV.h; sourceTree = "<group>"; };
+		60156D5317FFEF75001394E7 /* Item.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Item.cpp; sourceTree = "<group>"; };
+		60156D5417FFEF75001394E7 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		60156D5617FFF211001394E7 /* DaoRecipe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DaoRecipe.cpp; sourceTree = "<group>"; };
+		60156D5917FFF3DD001394E7 /* Sale.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sale.cpp; sourceTree = "<group>"; };
+		60156D5A17FFF3DD001394E7 /* Sale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sale.h; sourceTree = "<group>"; };
+		60156D5C17FFF499001394E7 /* DaoItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DaoItem.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +82,12 @@
 		60156D3517FFC0B5001394E7 /* MBVM */ = {
 			isa = PBXGroup;
 			children = (
+				60156D5817FFF3D1001394E7 /* Sale */,
+				60156D4D17FFD71E001394E7 /* IO */,
+				60156D4C17FFD711001394E7 /* Util */,
 				60156D4B17FFD546001394E7 /* Moneybag */,
 				60156D4A17FFD538001394E7 /* Pay */,
+				60156D5217FFEF62001394E7 /* Item */,
 				60156D4917FFD530001394E7 /* Recipe */,
 				60156D3617FFC0B5001394E7 /* main.cpp */,
 				60156D3817FFC0B5001394E7 /* MBVM.1 */,
@@ -85,6 +101,7 @@
 				60156D4417FFD52B001394E7 /* Recipe.cpp */,
 				60156D4517FFD52B001394E7 /* Recipe.h */,
 				60156D3F17FFD52B001394E7 /* DaoRecipe.h */,
+				60156D5617FFF211001394E7 /* DaoRecipe.cpp */,
 			);
 			name = Recipe;
 			sourceTree = "<group>";
@@ -105,6 +122,42 @@
 				60156D4117FFD52B001394E7 /* MoneyBag.h */,
 			);
 			name = Moneybag;
+			sourceTree = "<group>";
+		};
+		60156D4C17FFD711001394E7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				60156D4F17FFD7F6001394E7 /* util.h */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		60156D4D17FFD71E001394E7 /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				60156D4E17FFD72D001394E7 /* IO.h */,
+				60156D5117FFD89C001394E7 /* CSV.h */,
+			);
+			name = IO;
+			sourceTree = "<group>";
+		};
+		60156D5217FFEF62001394E7 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				60156D5317FFEF75001394E7 /* Item.cpp */,
+				60156D5417FFEF75001394E7 /* Item.h */,
+				60156D5C17FFF499001394E7 /* DaoItem.h */,
+			);
+			name = Item;
+			sourceTree = "<group>";
+		};
+		60156D5817FFF3D1001394E7 /* Sale */ = {
+			isa = PBXGroup;
+			children = (
+				60156D5917FFF3DD001394E7 /* Sale.cpp */,
+				60156D5A17FFF3DD001394E7 /* Sale.h */,
+			);
+			name = Sale;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,9 +212,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				60156D4717FFD52B001394E7 /* Pay.cpp in Sources */,
+				60156D5B17FFF3DD001394E7 /* Sale.cpp in Sources */,
 				60156D3717FFC0B5001394E7 /* main.cpp in Sources */,
 				60156D4617FFD52B001394E7 /* MoneyBag.cpp in Sources */,
 				60156D4817FFD52B001394E7 /* Recipe.cpp in Sources */,
+				60156D5717FFF211001394E7 /* DaoRecipe.cpp in Sources */,
+				60156D5517FFEF75001394E7 /* Item.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
