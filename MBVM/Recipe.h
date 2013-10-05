@@ -60,6 +60,13 @@ public:
      */
     void Make();
     
+    /**
+     *  必要な材料が残っているかどうかチェック
+     *
+     *  @return 必要な材料が残っているかどうか
+     */
+    bool HasSufficientIngredients() const;
+    
 private:
     RECIPE_INFO recipe_info;
 };

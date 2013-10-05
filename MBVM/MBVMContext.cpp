@@ -8,7 +8,7 @@
 
 #include "MBVMContext.h"
 
-MBVMContext::MBVMContext(MBVMStatus::typeID status, MBVMState* state) : status(status) , state(state) {
+MBVMContext::MBVMContext(MBVMStatus::typeID status, MBVMState* state) : status(status), state(state), maintenance(Maintenance(this->sale)) {
 }
 
 void MBVMContext::Run(int event_id, int value) {
@@ -16,6 +16,8 @@ void MBVMContext::Run(int event_id, int value) {
                   (this->status == MBVMStatus::OUT_OF_SERVICE)? MBVMStateOutOfService::GetInstance() :
                   MBVMStateMakingCoffee::GetInstance();
     this->state->Run(*this, event_id, value);
+    this->maintenance.Maintain();
+//    this->sale.DumpSales("records.csv");
 }
 
 void MBVMContext::SetStatus(MBVMStatus::typeID new_status) {

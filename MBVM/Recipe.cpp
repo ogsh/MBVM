@@ -24,3 +24,7 @@ Recipe& Recipe::operator=(const Recipe& obj) {
 void Recipe::Make() {
     cout << "できました" << endl;
 }
+
+bool Recipe::HasSufficientIngredients() const {
+    return true;
+}

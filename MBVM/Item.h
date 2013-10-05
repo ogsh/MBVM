@@ -10,7 +10,7 @@
 #define __MBVM__Item__
 
 #include <iostream>
-#include "recipe.h"
+#include "Recipe.h"
 #include "Pay.h"
 
 using namespace std;
@@ -62,6 +62,13 @@ public:
     bool IsAvailable() const;
     
     /**
+     *  必要な材料が残っているかどうかチェックする
+     *
+     *  @return 必要な材料が残っているかどうか
+     */
+    bool HasSufficientIngredients() const;
+    
+    /**
      *  商品名を取得する
      *
      *  @return 商品名
@@ -74,6 +81,7 @@ public:
      *  @return 商品価格
      */
     int GetPrice() const;
+    
     
 private:
     CoffeeType::typeID coffee_type;

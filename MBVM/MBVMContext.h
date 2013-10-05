@@ -12,6 +12,7 @@
 #include <iostream>
 #include "MBVMState.h"
 #include "Sale.h"
+#include "Maintenance.h"
 
 using namespace std;
 
@@ -104,6 +105,7 @@ private:
     MBVMStatus::typeID status;  ///< MBVMの状態
     MBVMState* state;           ///< MBVMの状態に応じて処理を行うためのオブジェクト
     Sale sale;                  ///< 販売
+    Maintenance maintenance;    ///< メンテナンス
 };
 
 #endif /* defined(__MBVM__MBVMContext__) */

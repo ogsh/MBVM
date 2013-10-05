@@ -20,7 +20,11 @@ int Item::Supply() {
 }
 
 bool Item::IsAvailable() const {
-    return this->price <= this->pay.GetDeposit();
+    return ( this->price <= this->pay.GetDeposit() && this->HasSufficientIngredients() );
+}
+
+bool Item::HasSufficientIngredients() const {
+    return this->recipe.HasSufficientIngredients();
 }
 
 int Item::GetPrice() const {

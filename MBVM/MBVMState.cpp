@@ -39,7 +39,6 @@ void MBVMStateAvailable::Run(MBVMContext& context, int event_id, int value) {
     }
 }
 
-
 MBVMState* MBVMStateOutOfService::self = NULL;
 
 MBVMState* MBVMStateOutOfService::GetInstance() {

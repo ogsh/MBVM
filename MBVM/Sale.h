@@ -10,8 +10,11 @@
 #define __MBVM__Sale__
 
 #include <iostream>
+#include <fstream>
+#include <sstream>
 #include "Pay.h"
 #include "Item.h"
+#include "SalesRecord.h"
 
 using namespace std;
 
@@ -55,10 +58,31 @@ public:
      */
     void Refund();
     
+    /**
+     *  売り上げ記録を出力する
+     *
+     */
+    void DumpSales(const string& filepath);
+    
+    /**
+     *  Sale が持つ商品群を取得
+     *
+     *  @return 商品群
+     */
+    const map<CoffeeType::typeID, Item>& GetItems() const;
+    
+    /**
+     *  Sale が持つ支払いオブジェクトを取得
+     *
+     *  @return 支払いオブジェクト
+     */
+    const Pay& GetPay() const;
+    
+    
 private:
     Pay pay;
-    map<CoffeeType::typeID, Item, greater<CoffeeType::typeID>> items;
-    
+    map<CoffeeType::typeID, Item> items;
+    SalesRecord record;
 };
 
 #endif /* defined(__MBVM__Sale__) */

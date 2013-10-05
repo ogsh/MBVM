@@ -57,10 +57,10 @@ public:
         recipe_info.clear();
         for(int j = 0; j < csv.Rows(); ++j) {
             string name = csv.At(0, 0);
-            int bean = Util::StrToNum<int>(csv.At(1, j));
-            int milk = Util::StrToNum<int>(csv.At(2, j));
-            int sugar = Util::StrToNum<int>(csv.At(3, j));
-            int water = Util::StrToNum<int>(csv.At(4, j));
+            int bean = Util::String::StrToNum<int>(csv.At(1, j));
+            int milk = Util::String::StrToNum<int>(csv.At(2, j));
+            int sugar = Util::String::StrToNum<int>(csv.At(3, j));
+            int water = Util::String::StrToNum<int>(csv.At(4, j));
             RECIPE_INFO tmp_recipe_info = {bean, milk, sugar, water};
             recipe_info.insert(make_pair(coffee_types[j], tmp_recipe_info));
         }

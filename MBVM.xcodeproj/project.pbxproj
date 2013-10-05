@@ -31,6 +31,9 @@
 		60156D5B17FFF3DD001394E7 /* Sale.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60156D5917FFF3DD001394E7 /* Sale.cpp */; };
 		60156D6018002429001394E7 /* MBVMState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60156D5E18002429001394E7 /* MBVMState.cpp */; };
 		60156D6418002496001394E7 /* MBVMContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60156D6218002496001394E7 /* MBVMContext.cpp */; };
+		60B7E3EA180075CF00FC011E /* Maintenance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60B7E3E8180075CF00FC011E /* Maintenance.cpp */; };
+		60B7E3F11800D0E200FC011E /* SalesRecord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60B7E3EF1800D0E200FC011E /* SalesRecord.cpp */; };
+		60B7E3F41800D1AC00FC011E /* Receipt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60B7E3F21800D1AC00FC011E /* Receipt.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +72,12 @@
 		60156D6218002496001394E7 /* MBVMContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MBVMContext.cpp; sourceTree = "<group>"; };
 		60156D6318002496001394E7 /* MBVMContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBVMContext.h; sourceTree = "<group>"; };
 		60156D6518003AFC001394E7 /* Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		60B7E3E8180075CF00FC011E /* Maintenance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Maintenance.cpp; sourceTree = "<group>"; };
+		60B7E3E9180075CF00FC011E /* Maintenance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Maintenance.h; sourceTree = "<group>"; };
+		60B7E3EF1800D0E200FC011E /* SalesRecord.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SalesRecord.cpp; sourceTree = "<group>"; };
+		60B7E3F01800D0E200FC011E /* SalesRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalesRecord.h; sourceTree = "<group>"; };
+		60B7E3F21800D1AC00FC011E /* Receipt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Receipt.cpp; sourceTree = "<group>"; };
+		60B7E3F31800D1AC00FC011E /* Receipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Receipt.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,9 @@
 		60156D3517FFC0B5001394E7 /* MBVM */ = {
 			isa = PBXGroup;
 			children = (
+				60B7E3F51800D1B800FC011E /* Receipt */,
+				60B7E3EE1800D0D000FC011E /* SalesRecord */,
+				60B7E3E7180075BE00FC011E /* Maintenance */,
 				60156D611800248A001394E7 /* MBVMContext */,
 				60156D5D18002416001394E7 /* MBVMState */,
 				60156D5817FFF3D1001394E7 /* Sale */,
@@ -198,6 +210,33 @@
 			name = MBVMContext;
 			sourceTree = "<group>";
 		};
+		60B7E3E7180075BE00FC011E /* Maintenance */ = {
+			isa = PBXGroup;
+			children = (
+				60B7E3E8180075CF00FC011E /* Maintenance.cpp */,
+				60B7E3E9180075CF00FC011E /* Maintenance.h */,
+			);
+			name = Maintenance;
+			sourceTree = "<group>";
+		};
+		60B7E3EE1800D0D000FC011E /* SalesRecord */ = {
+			isa = PBXGroup;
+			children = (
+				60B7E3EF1800D0E200FC011E /* SalesRecord.cpp */,
+				60B7E3F01800D0E200FC011E /* SalesRecord.h */,
+			);
+			name = SalesRecord;
+			sourceTree = "<group>";
+		};
+		60B7E3F51800D1B800FC011E /* Receipt */ = {
+			isa = PBXGroup;
+			children = (
+				60B7E3F21800D1AC00FC011E /* Receipt.cpp */,
+				60B7E3F31800D1AC00FC011E /* Receipt.h */,
+			);
+			name = Receipt;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -270,11 +309,14 @@
 				60156D6018002429001394E7 /* MBVMState.cpp in Sources */,
 				60156D5B17FFF3DD001394E7 /* Sale.cpp in Sources */,
 				60156D3717FFC0B5001394E7 /* main.cpp in Sources */,
+				60B7E3F41800D1AC00FC011E /* Receipt.cpp in Sources */,
 				60156D4617FFD52B001394E7 /* MoneyBag.cpp in Sources */,
 				60156D4817FFD52B001394E7 /* Recipe.cpp in Sources */,
 				60156D5717FFF211001394E7 /* DaoRecipe.cpp in Sources */,
 				60156D6418002496001394E7 /* MBVMContext.cpp in Sources */,
+				60B7E3F11800D0E200FC011E /* SalesRecord.cpp in Sources */,
 				60156D5517FFEF75001394E7 /* Item.cpp in Sources */,
+				60B7E3EA180075CF00FC011E /* Maintenance.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

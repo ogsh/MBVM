@@ -27,6 +27,7 @@ bool Sale::SelectItem(CoffeeType::typeID coffee_type) {
 
     if(this->items[coffee_type].IsAvailable()) {
         this->pay.MakePayment(this->items[coffee_type].GetPrice());
+        this->record.PushBack(this->items[coffee_type]);
         cout << this->items[coffee_type].GetName() << "を買いました\t" << "残金：" << this->pay.GetDeposit() << endl;
         res = true;
     }
@@ -50,4 +51,20 @@ void Sale::Refund() {
     cout << "お金を払い戻します" << endl;
     this->pay.Refund();
     cout << "残金：" << pay.GetDeposit() << endl;
+}
+
+void Sale::DumpSales(const string& filepath) {
+    ofstream os(filepath, ios::app | ios::out);
+    this->record.Dump(os);
+    os.close();
+    
+}
+
+
+const map<CoffeeType::typeID, Item>& Sale::GetItems() const {
+    return this->items;
+}
+
+const Pay& Sale::GetPay() const {
+    return this->pay;
 }
