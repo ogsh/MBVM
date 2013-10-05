@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "MBVMState.h"
+#include "Sale.h"
 
 using namespace std;
 
@@ -24,17 +25,32 @@ namespace MBVMStatus {
     };
 };
 
+namespace EventID {
+    enum typeID {
+        PAY = 302,
+        BUY = 303,
+        CANCEL = 304,
+        POWER = 400
+    };
+};
+
 class MBVMContext {
 public:
     MBVMContext(MBVMStatus::typeID status = MBVMStatus::AVAILABLE);
     
-    void Run();
+    void Run(int event_id, int value);
     MBVMStatus::typeID GetStatus() const;
     void SetStatus(MBVMStatus::typeID new_status);
+    
+    void Pay(MoneyType::typeID money_type);
+    bool SelectItem(CoffeeType::typeID coffee_type);
+    void SupplyItem(CoffeeType::typeID coffee_type);
+    void Cancel();
     
 private:
     MBVMStatus::typeID status;
     MBVMState* state;
+    Sale sale;
 };
 
 #endif /* defined(__MBVM__MBVMContext__) */

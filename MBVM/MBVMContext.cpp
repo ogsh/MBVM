@@ -9,14 +9,14 @@
 #include "MBVMContext.h"
 
 
-MBVMContext::MBVMContext(MBVMStatus::typeID status) : status(status) , state(MBVMStateAvailable::GetInstance()) {
+MBVMContext::MBVMContext(MBVMStatus::typeID status) : status(MBVMStatus::OUT_OF_SERVICE) , state(MBVMStateOutOfService::GetInstance()) {
 }
 
-void MBVMContext::Run() {
+void MBVMContext::Run(int event_id, int value) {
     this->state = (this->status == MBVMStatus::AVAILABLE)? MBVMStateAvailable::GetInstance() :
                   (this->status == MBVMStatus::OUT_OF_SERVICE)? MBVMStateOutOfService::GetInstance() :
                   MBVMStateMakingCoffee::GetInstance();
-    this->state->Run(*this, 0, 0);
+    this->state->Run(*this, event_id, value);
 }
 
 void MBVMContext::SetStatus(MBVMStatus::typeID new_status) {
@@ -25,4 +25,20 @@ void MBVMContext::SetStatus(MBVMStatus::typeID new_status) {
 
 MBVMStatus::typeID MBVMContext::GetStatus() const {
     return this->status;
+}
+
+void MBVMContext::Pay(MoneyType::typeID money_type) {
+    this->sale.DropInCoin(money_type);
+}
+
+bool MBVMContext::SelectItem(CoffeeType::typeID coffee_type) {
+    return this->sale.SelectItem(coffee_type);
+}
+
+void MBVMContext::SupplyItem(CoffeeType::typeID coffee_type) {
+    this->sale.SupplyItem(coffee_type);
+}
+
+void MBVMContext::Cancel() {
+    this->sale.Refund();
 }

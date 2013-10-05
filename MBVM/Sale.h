@@ -20,7 +20,8 @@ public:
     Sale();
     
     void ShowItems();
-    int SelectItem(CoffeeType::typeID coffee_type);
+    bool SelectItem(CoffeeType::typeID coffee_type);
+    void SupplyItem(CoffeeType::typeID coffee_type);
     
     void DropInCoin(MoneyType::typeID money_type);
     void Refund();

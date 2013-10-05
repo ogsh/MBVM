@@ -7,21 +7,46 @@
 //
 
 #include <iostream>
-#include "CSV.h"
-#include "Sale.h"
-
+#include "MBVMContext.h"
 
 using namespace std;
 
 void Test_csv(const string& fname);
 void Test_case1();
+void Test_context(MBVMContext& context);
 
 int main(int argc, const char * argv[])
 {
+    srand((unsigned int)time(NULL));
     DaoRecipe::Initialize("recipe.csv");
+    MBVMContext context;
 
-    Test_case1();
+    Test_context(context);
+
     return 0;
+}
+
+void Test_context(MBVMContext& context) {
+    const int max_num_itr = 100;
+    int num_itr = 0;
+    EventID::typeID events[] = {EventID::PAY, EventID::CANCEL, EventID::BUY, EventID::POWER};
+    MoneyType::typeID moneys[] = {MoneyType::MONEY10, MoneyType::MONEY100, MoneyType::MONEY50, MoneyType::MONEY500};
+    CoffeeType::typeID coffees[] = {CoffeeType::MARUKO, CoffeeType::SPECIAL, CoffeeType::CAPPUCCINO};
+    
+    while(num_itr++ < max_num_itr) {
+        int event_id = static_cast<int>(events[rand()%sizeof(events)]);
+        int value = 0;
+
+        if(event_id == EventID::PAY) {
+            value = moneys[rand()%sizeof(moneys)];
+        }
+        else if(event_id == EventID::BUY) {
+            value = coffees[rand()%sizeof(coffees)];
+        }
+
+        context.Run(event_id, value);
+        
+    }
 }
 
 void Test_case1() {

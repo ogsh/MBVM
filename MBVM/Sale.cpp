@@ -22,19 +22,23 @@ void Sale::ShowItems() {
     }
 }
 
-int Sale::SelectItem(CoffeeType::typeID coffee_type) {
+bool Sale::SelectItem(CoffeeType::typeID coffee_type) {
+    bool res = false;
+
     if(this->items[coffee_type].IsAvailable()) {
         this->pay.MakePayment(this->items[coffee_type].GetPrice());
         cout << this->items[coffee_type].GetName() << "を買いました\t" << "残金：" << this->pay.GetDeposit() << endl;
+        res = true;
     }
     else {
         cout << this->items[coffee_type].GetName() << "は買えないよ" << "残金：" << this->pay.GetDeposit() << endl;
-        return -1;
     }
     
-    this->items[coffee_type].Supply();
+    return res;
+}
 
-    return 0;
+void Sale::SupplyItem(CoffeeType::typeID coffee_type) {
+    this->items[coffee_type].Supply();
 }
 
 void Sale::DropInCoin(MoneyType::typeID money_type) {
