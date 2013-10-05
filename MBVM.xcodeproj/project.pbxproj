@@ -54,7 +54,7 @@
 		60156D5F18002429001394E7 /* MBVMState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBVMState.h; sourceTree = "<group>"; };
 		60156D6218002496001394E7 /* MBVMContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MBVMContext.cpp; sourceTree = "<group>"; };
 		60156D6318002496001394E7 /* MBVMContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBVMContext.h; sourceTree = "<group>"; };
-		60156D6518003AFC001394E7 /* Util2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util2.h; sourceTree = "<group>"; };
+		60156D6518003AFC001394E7 /* Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +134,7 @@
 		60156D4C17FFD711001394E7 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				60156D6518003AFC001394E7 /* Util2.h */,
+				60156D6518003AFC001394E7 /* Util.h */,
 			);
 			name = Util;
 			sourceTree = "<group>";
