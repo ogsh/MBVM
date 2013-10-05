@@ -33,7 +33,6 @@ bool Pay::MakePayment(int price) {
     
     map<MoneyType::typeID, MoneyBag>::iterator itr = this->money_bags.begin();
     for(itr = this->money_bags.begin(); itr != this->money_bags.end(); ++itr) {
-//        deposit = (deposit < 0)? 0 : deposit;
         int required_coins = deposit / itr->second.GetValue();
         itr->second.SetCount(required_coins);
         deposit -= itr->second.AmountOfMoney();
@@ -46,10 +45,9 @@ bool Pay::MakePayment(int price) {
 void Pay::Refund() {
     map<MoneyType::typeID, MoneyBag>::iterator itr = this->money_bags.begin();
     for(; itr != this->money_bags.end(); ++itr) {
-        for(; itr->second.GetCount() > 0; --itr->second) {
-            std::cout << itr->second;
+        while(itr->second.GetCount() > 0) {
+            --itr->second;
         }
-        std::cout << itr->second << std::endl;
     }
 }
 

@@ -41,3 +41,9 @@ void Sale::DropInCoin(MoneyType::typeID money_type) {
     this->pay.AddDeposit(money_type);
     cout << "投入金額:" << this->pay.GetDeposit() << endl;
 }
+
+void Sale::Refund() {
+    cout << "お金を払い戻します" << endl;
+    this->pay.Refund();
+    cout << "残金：" << pay.GetDeposit() << endl;
+}

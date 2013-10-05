@@ -23,6 +23,7 @@ public:
     int SelectItem(CoffeeType::typeID coffee_type);
     
     void DropInCoin(MoneyType::typeID money_type);
+    void Refund();
     
 private:
     Pay pay;

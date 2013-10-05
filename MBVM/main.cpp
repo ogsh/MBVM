@@ -31,10 +31,10 @@ void Test_case1() {
 
     MoneyType::typeID moneys[] = {
         MoneyType::MONEY10,
-        MoneyType::MONEY100,
-        MoneyType::MONEY10,
         MoneyType::MONEY500,
-        MoneyType::MONEY500
+        MoneyType::MONEY500,
+        MoneyType::MONEY500,
+        MoneyType::MONEY100,
     };
     
     for(int i=0; i < sizeof(moneys) / sizeof(MoneyType::typeID); ++i) {
@@ -45,6 +45,8 @@ void Test_case1() {
     sale.SelectItem(CoffeeType::MARUKO);
     sale.SelectItem(CoffeeType::SPECIAL);
     sale.SelectItem(CoffeeType::CAPPUCCINO);
+    
+    sale.Refund();
 }
 
 void Test_csv(const string& fname) {
