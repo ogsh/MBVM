@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <map>
+#include <vector>
 
 #include "MoneyBag.h"
 
@@ -26,8 +27,7 @@ public:
     void Refund();
     
 private:
-    static int moneys[4];
-    map<MoneyType::typeID, MoneyBag> money_bags;
+    map<MoneyType::typeID, MoneyBag, greater<MoneyType::typeID>> money_bags;
 };
 
 #endif /* defined(__InterprocessCommunication__pay__) */

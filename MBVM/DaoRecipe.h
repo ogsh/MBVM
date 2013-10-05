@@ -31,37 +31,6 @@ typedef struct recipe_info {
     int water;
 } RECIPE_INFO;
 
-/*
-class RECIPE_INFO {
-public:
-    int bean;
-    int sugar;
-    int milk;
-    int water;
-    
-    RECIPE_INFO() :
-    bean(0), sugar(0), milk(0), water(0) {
-    }
-    
-    RECIPE_INFO(int bean, int sugar, int milk, int water) :
-    bean(bean), sugar(sugar), milk(milk), water(water) {
-    }
-    
-    RECIPE_INFO(const RECIPE_INFO& obj) :
-    bean(obj.bean), sugar(obj.sugar), milk(obj.milk), water(obj.water) {
-        
-    }
-    
-    RECIPE_INFO& operator=(const RECIPE_INFO& obj) {
-        this->bean = obj.bean;
-        this->sugar = obj.sugar;
-        this->milk = obj.milk;
-        this->water = obj.water;
-        return *this;
-    }
-};
- */
-
 class DaoRecipe {
 public:
     static void Initialize(const string& recipe_file_path) {

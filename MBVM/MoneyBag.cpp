@@ -38,6 +38,7 @@ MoneyBag MoneyBag::operator++(int n) {
 MoneyBag& MoneyBag::operator--() {
     if(this->count > 0) {
         -- this->count;
+        std::cout << "refund[" << this->value << "]\t" << this->count << " /" << this->max_count << std::endl;
     }
     else {
         std::cerr << "money bag is empty" << std::endl;
@@ -82,11 +83,15 @@ bool MoneyBag::operator>(const MoneyBag& obj) const {
 }
 
 std::ostream& operator<<(std::ostream& os, const MoneyBag& obj) {
-    os << "moneybag[" << obj.value << "]" << "\t" << obj.count << " /" << obj.max_count << std::endl;
+    os << "pay[" << obj.value << "]" << "\t" << obj.count << " /" << obj.max_count << std::endl;
     return os;
 }
 
 int MoneyBag::GetValue() const {
+    return this->value;
+}
+
+int MoneyBag::AmountOfMoney() const {
     return this->count * this->value;
 }
 
@@ -95,5 +100,5 @@ int MoneyBag::GetCount() const {
 }
 
 void MoneyBag::SetCount(int count) {
-    this->count = count;
+    this->count = (count > 0)? count : 0;
 }

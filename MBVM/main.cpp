@@ -32,7 +32,9 @@ void Test_case1() {
     MoneyType::typeID moneys[] = {
         MoneyType::MONEY10,
         MoneyType::MONEY100,
-        MoneyType::MONEY10
+        MoneyType::MONEY10,
+        MoneyType::MONEY500,
+        MoneyType::MONEY500
     };
     
     for(int i=0; i < sizeof(moneys) / sizeof(MoneyType::typeID); ++i) {

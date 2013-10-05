@@ -37,10 +37,9 @@ public:
     bool operator>(const MoneyBag& obj) const;
     friend std::ostream& operator<<(std::ostream& os, const MoneyBag& obj);
 
+    int AmountOfMoney() const;
     int GetValue() const;
-
     int GetCount() const;
-
     void SetCount(int count);
     
 private:

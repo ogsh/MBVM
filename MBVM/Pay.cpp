@@ -8,7 +8,6 @@
 
 #include "Pay.h"
 
-int Pay::moneys[4] = {500, 100, 50, 10};
 
 Pay::Pay() {
     this->money_bags.insert(std::make_pair(MoneyType::MONEY500, MoneyBag(500, 50)));
@@ -24,20 +23,21 @@ Pay& Pay::AddDeposit(MoneyType::typeID money_type) {
 }
 
 bool Pay::MakePayment(int price) {
-    int deposit = 0;
+    int deposit = this->GetDeposit();
     
-    map<MoneyType::typeID, MoneyBag>::iterator itr = this->money_bags.begin();
-    for(; itr != this->money_bags.end(); ++itr) {
-        deposit += itr->second.GetValue();
-    }
     if(deposit < price) {
         return false;
     }
-
-    for(itr = this->money_bags.begin(); itr != this->money_bags.end(); ++itr) {
-        itr->second.SetCount(0);
-    }
     
+    deposit -= price;
+    
+    map<MoneyType::typeID, MoneyBag>::iterator itr = this->money_bags.begin();
+    for(itr = this->money_bags.begin(); itr != this->money_bags.end(); ++itr) {
+//        deposit = (deposit < 0)? 0 : deposit;
+        int required_coins = deposit / itr->second.GetValue();
+        itr->second.SetCount(required_coins);
+        deposit -= itr->second.AmountOfMoney();
+    }
     
     return true;
 }
@@ -58,7 +58,7 @@ int Pay::GetDeposit() const {
     map<MoneyType::typeID, MoneyBag>::const_iterator itr = this->money_bags.begin();
 
     for(; itr != this->money_bags.end(); ++itr) {
-        deposit += itr->second.GetValue();
+        deposit += itr->second.AmountOfMoney();
     }
     
     return deposit;

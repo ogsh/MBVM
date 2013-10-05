@@ -26,7 +26,7 @@ public:
     
 private:
     Pay pay;
-    map<CoffeeType::typeID, Item> items;
+    map<CoffeeType::typeID, Item, greater<CoffeeType::typeID>> items;
     
 };
 
