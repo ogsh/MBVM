@@ -31,7 +31,7 @@ bool Sale::SelectItem(CoffeeType::typeID coffee_type) {
         res = true;
     }
     else {
-        cout << this->items[coffee_type].GetName() << "は買えないよ" << "残金：" << this->pay.GetDeposit() << endl;
+        cout << this->items[coffee_type].GetName() << "は買えないよ\t" << "残金：" << this->pay.GetDeposit() << endl;
     }
     
     return res;

@@ -194,6 +194,7 @@
 				60156D2F17FFC0B5001394E7 /* Sources */,
 				60156D3017FFC0B5001394E7 /* Frameworks */,
 				60156D3117FFC0B5001394E7 /* CopyFiles */,
+				60156D6718004DC5001394E7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -229,6 +230,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		60156D6718004DC5001394E7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"/Applications/Doxygen.app/Contents/Resources/doxygen Doxyfile",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		60156D2F17FFC0B5001394E7 /* Sources */ = {
