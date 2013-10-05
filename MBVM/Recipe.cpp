@@ -22,5 +22,5 @@ Recipe& Recipe::operator=(const Recipe& obj) {
 }
 
 void Recipe::Supply() {
-    cout << "作ります" << endl;
+    cout << "できました" << endl;
 }

@@ -14,6 +14,7 @@ coffee_type(coffee_type), name(name), price(price), recipe(Recipe(coffee_type)),
 }
 
 int Item::Supply() {
+    cout << this->name << "をつくります．";
     this->recipe.Supply();
     return 0;
 }
