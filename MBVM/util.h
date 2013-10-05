@@ -1,13 +1,13 @@
 //
-//  util.h
-//  cpp_enshu
+//  Util.h
+//  MBVM
 //
-//  Created by ogsh on 2013/09/05.
+//  Created by ogsh on 2013/10/05.
 //  Copyright (c) 2013年 ogsh. All rights reserved.
 //
 
-#ifndef cpp_enshu_util_h
-#define cpp_enshu_util_h
+#ifndef MBVM_Util_h
+#define MBVM_Util_h
 
 #include <iostream>
 #include <sstream>

@@ -22,7 +22,10 @@ public:
     friend ostream& operator<<(ostream& os, const Item& obj) {
         string dbar(30, '=');
         string bar(30, '-');
+
         os << dbar << endl;
+        os << "名称: " << obj.name << "\t価格: " << obj.price << endl;
+        os << bar << endl;
         os << "Recipe Information" << endl;
         os << bar << endl;
         os << obj.recipe;

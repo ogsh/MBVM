@@ -10,45 +10,50 @@
 #define __MBVM__MBVMState__
 
 #include <iostream>
+#include "MBVMContext.h"
 
-namespace MBVMStatus {
-    enum typeID {
-        AVAILABLE,
-        OUT_OF_SERVICE,
-        MAKING_COFFEE
-    };
-};
+class MBVMContext;
 
 class MBVMState {
 public:
-    virtual MBVMStatus::typeID Run(int event_id, int value) = 0;
+    virtual void Run(MBVMContext& context, int event_id, int value) = 0;
 };
 
 class MBVMStateAvailable : MBVMState {
 public:
-    MBVMStatus::typeID Run(int event_id, int value) {
-        MBVMStatus::typeID status = MBVMStatus::AVAILABLE;
-        
-        return status;
-    }
+    static MBVMState* GetInstance();
+    void Run(MBVMContext& context, int event_id, int value);
+private:
+    static MBVMState* self;
+    
+    MBVMStateAvailable() {}
+    MBVMStateAvailable(const MBVMStateAvailable& obj);
+    MBVMStateAvailable& operator=(const MBVMStateAvailable& obj);
 };
 
 class MBVMStateOutOfService : MBVMState {
 public:
-    MBVMStatus::typeID Run(int event_id, int value) {
-        MBVMStatus::typeID status = MBVMStatus::AVAILABLE;
-        
-        return status;
-    }
+    static MBVMState* GetInstance();
+    void Run(MBVMContext& context, int event_id, int value);
+private:
+    static MBVMState* self;
+    
+    MBVMStateOutOfService() {}
+    MBVMStateOutOfService(const MBVMStateAvailable& obj);
+    MBVMStateOutOfService& operator=(const MBVMStateAvailable& obj);
 };
 
 class MBVMStateMakingCoffee : MBVMState {
 public:
-    MBVMStatus::typeID Run(int event_id, int value) {
-        MBVMStatus::typeID status = MBVMStatus::AVAILABLE;
-        
-        return status;
-    }
+    static MBVMState* GetInstance();
+    void Run(MBVMContext& context, int event_id, int value);
+private:
+    static MBVMState* self;
+    
+    MBVMStateMakingCoffee() {}
+    MBVMStateMakingCoffee(const MBVMStateAvailable& obj);
+    MBVMStateMakingCoffee& operator=(const MBVMStateAvailable& obj);
 };
+
 
 #endif /* defined(__MBVM__MBVMState__) */

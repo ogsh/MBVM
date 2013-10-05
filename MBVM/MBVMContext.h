@@ -14,11 +14,27 @@
 
 using namespace std;
 
+class MBVMState;
+
+namespace MBVMStatus {
+    enum typeID {
+        AVAILABLE,
+        OUT_OF_SERVICE,
+        MAKING_COFFEE
+    };
+};
+
 class MBVMContext {
 public:
+    MBVMContext(MBVMStatus::typeID status = MBVMStatus::AVAILABLE);
+    
+    void Run();
+    MBVMStatus::typeID GetStatus() const;
+    void SetStatus(MBVMStatus::typeID new_status);
     
 private:
     MBVMStatus::typeID status;
+    MBVMState* state;
 };
 
 #endif /* defined(__MBVM__MBVMContext__) */

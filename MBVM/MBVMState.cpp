@@ -7,3 +7,44 @@
 //
 
 #include "MBVMState.h"
+
+MBVMState* MBVMStateAvailable::self = NULL;
+
+MBVMState* MBVMStateAvailable::GetInstance() {
+    if(self == NULL) {
+        self = new MBVMStateAvailable();
+    }
+    return self;
+}
+
+void MBVMStateAvailable::Run(MBVMContext& context, int event_id, int value) {
+    
+}
+
+
+MBVMState* MBVMStateOutOfService::self = NULL;
+
+MBVMState* MBVMStateOutOfService::GetInstance() {
+    if(self == NULL) {
+        self = new MBVMStateOutOfService();
+    }
+    return self;
+}
+
+void MBVMStateOutOfService::Run(MBVMContext& context, int event_id, int value) {
+    
+}
+
+
+MBVMState* MBVMStateMakingCoffee::self = NULL;
+
+MBVMState* MBVMStateMakingCoffee::GetInstance() {
+    if(self == NULL) {
+        self = new MBVMStateMakingCoffee();
+    }
+    return self;
+}
+
+void MBVMStateMakingCoffee::Run(MBVMContext& context, int event_id, int value) {
+    
+}
