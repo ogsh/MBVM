@@ -36,7 +36,7 @@ namespace EventID {
 
 class MBVMContext {
 public:
-    MBVMContext(MBVMStatus::typeID status = MBVMStatus::AVAILABLE);
+    MBVMContext(MBVMStatus::typeID status, MBVMState* state);
     
     void Run(int event_id, int value);
     MBVMStatus::typeID GetStatus() const;

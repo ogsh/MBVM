@@ -65,5 +65,5 @@ MBVMState* MBVMStateMakingCoffee::GetInstance() {
 }
 
 void MBVMStateMakingCoffee::Run(MBVMContext& context, int event_id, int value) {
-    
+    context.SetStatus(MBVMStatus::AVAILABLE);
 }

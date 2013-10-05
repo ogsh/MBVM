@@ -9,7 +9,7 @@
 #include "MBVMContext.h"
 
 
-MBVMContext::MBVMContext(MBVMStatus::typeID status) : status(MBVMStatus::OUT_OF_SERVICE) , state(MBVMStateOutOfService::GetInstance()) {
+MBVMContext::MBVMContext(MBVMStatus::typeID status, MBVMState* state) : status(status) , state(state) {
 }
 
 void MBVMContext::Run(int event_id, int value) {
