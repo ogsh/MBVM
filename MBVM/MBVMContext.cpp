@@ -8,7 +8,6 @@
 
 #include "MBVMContext.h"
 
-
 MBVMContext::MBVMContext(MBVMStatus::typeID status, MBVMState* state) : status(status) , state(state) {
 }
 

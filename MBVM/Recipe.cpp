@@ -21,6 +21,6 @@ Recipe& Recipe::operator=(const Recipe& obj) {
     return *this;
 }
 
-void Recipe::Supply() {
+void Recipe::Make() {
     cout << "できました" << endl;
 }

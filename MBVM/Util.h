@@ -12,8 +12,18 @@
 #include <iostream>
 #include <sstream>
 
+/**
+ *  ユーティリティクラス
+ */
 class Util {
 public:
+    /**
+     *  文字列を数値に変換する
+     *
+     *  @param str 変換したい文字列
+     *
+     *  @return 変換して得られた値
+     */
     template<class T>
     static T StrToNum(const std::string& str) {
         T res;
@@ -22,6 +32,14 @@ public:
         ss >> res;
         return res;
     }
+    
+    /**
+     *  数値を文字列に変換する
+     *
+     *  @param num 変換したい数値
+     *
+     *  @return 変換して得られた文字列
+     */
     template <class T>
     static std::string NumToStr(T num) {
         std::stringstream ss;

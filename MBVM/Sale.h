@@ -15,15 +15,44 @@
 
 using namespace std;
 
+/**
+ *  販売業務を行う
+ */
 class Sale {
 public:
     Sale();
-    
+
+    /**
+     *  販売可能な商品を表示
+     */
     void ShowItems();
+    
+    /**
+     *  商品を選択する
+     *
+     *  @param coffee_type 選択された商品
+     *
+     *  @return 商品の購入可否
+     */
     bool SelectItem(CoffeeType::typeID coffee_type);
+
+    /**
+     *  商品を提供する
+     *
+     *  @param coffee_type 提供される商品の種類
+     */
     void SupplyItem(CoffeeType::typeID coffee_type);
     
+    /**
+     *  硬貨を投入する
+     *
+     *  @param money_type 投入される硬貨の種類
+     */
     void DropInCoin(MoneyType::typeID money_type);
+    
+    /**
+     *  投入金額を払い戻す
+     */
     void Refund();
     
 private:

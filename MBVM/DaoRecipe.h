@@ -16,23 +16,40 @@
 
 using namespace std;
 
+/**
+ *  コーヒーの種類
+ */
 namespace CoffeeType {
+    /**
+     *  コーヒーの種類
+     */
     enum typeID {
-        MARUKO = 301,
-        SPECIAL = 302,
-        CAPPUCCINO = 303
+        MARUKO = 301,       ///< マルコブレンド
+        SPECIAL = 302,      ///< スペシャルブレンド
+        CAPPUCCINO = 303    ///< カプチーノ
     };
 }
 
+/**
+ *  レシピ情報
+ */
 typedef struct recipe_info {
-    int bean;
-    int sugar;
-    int milk;
-    int water;
+    int bean;               ///< コーヒー豆分量
+    int sugar;              ///< 砂糖分量
+    int milk;               ///< ミルク分量
+    int water;              ///< 水分量
 } RECIPE_INFO;
 
+/**
+ *  レシピDAO
+ */
 class DaoRecipe {
 public:
+    /**
+     *  初期化
+     *
+     *  @param recipe_file_path レシピ情報が記述されたファイルへのパス
+     */
     static void Initialize(const string& recipe_file_path) {
         CoffeeType::typeID coffee_types[3] = {CoffeeType::MARUKO, CoffeeType::SPECIAL, CoffeeType::CAPPUCCINO};
         CSV csv(recipe_file_path, ',');
@@ -49,6 +66,13 @@ public:
         }
     }
     
+    /**
+     *  レシピ情報を取得する
+     *
+     *  @param coffee_type コーヒーの種類
+     *
+     *  @return レシピ情報
+     */
     static const RECIPE_INFO& Get(CoffeeType::typeID coffee_type) {
         return recipe_info[coffee_type];
     }

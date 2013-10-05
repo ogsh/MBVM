@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		60B7E3DF1800723900FC011E /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 60B7E3E21800723900FC011E /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				60B7E3E51800729000FC011E /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		60156D3717FFC0B5001394E7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60156D3617FFC0B5001394E7 /* main.cpp */; };
 		60156D3917FFC0B5001394E7 /* MBVM.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60156D3817FFC0B5001394E7 /* MBVM.1 */; };
@@ -194,7 +208,6 @@
 				60156D2F17FFC0B5001394E7 /* Sources */,
 				60156D3017FFC0B5001394E7 /* Frameworks */,
 				60156D3117FFC0B5001394E7 /* CopyFiles */,
-				60156D6718004DC5001394E7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -227,24 +240,24 @@
 			projectRoot = "";
 			targets = (
 				60156D3217FFC0B5001394E7 /* MBVM */,
+				60B7E3DF1800723900FC011E /* Documentation */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		60156D6718004DC5001394E7 /* ShellScript */ = {
+		60B7E3E51800729000FC011E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"/Applications/Doxygen.app/Contents/Resources/doxygen Doxyfile",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "";
+			shellPath = "/Applications/Doxygen.app/Contents/Resources/doxygen Doxyfile";
+			shellScript = "for doxygen";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -350,6 +363,20 @@
 			};
 			name = Release;
 		};
+		60B7E3E01800723900FC011E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		60B7E3E11800723900FC011E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -370,6 +397,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		60B7E3E21800723900FC011E /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60B7E3E01800723900FC011E /* Debug */,
+				60B7E3E11800723900FC011E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
