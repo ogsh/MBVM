@@ -1,0 +1,5 @@
+<map id="Pay::Refund" name="Pay::Refund">
+<area shape="rect" id="node2" href="$class_sale.html#ae43ee965e09a7e4bb1e4ba6859c5c63c" title="Sale::Refund" alt="" coords="149,5,248,32"/>
+<area shape="rect" id="node3" href="$class_m_b_v_m_context.html#a2f617cd9ba53d89838dfbca2e057a1f8" title="MBVMContext::Cancel" alt="" coords="296,5,453,32"/>
+<area shape="rect" id="node4" href="$class_m_b_v_m_state_available.html#ab696043ab0b37f3eae2dca313d9266f2" title="MBVMStateAvailable::Run" alt="" coords="501,5,680,32"/>
+</map>

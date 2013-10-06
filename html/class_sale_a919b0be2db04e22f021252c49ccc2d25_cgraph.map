@@ -1,0 +1,5 @@
+<map id="Sale::SelectItem" name="Sale::SelectItem">
+<area shape="rect" id="node2" href="$class_pay.html#affb32e82d8300519bddb984d3bba351b" title="Pay::MakePayment" alt="" coords="187,5,325,32"/>
+<area shape="rect" id="node3" href="$class_pay.html#a047f5f92b907200a630e9c405bfa2c9b" title="Pay::GetDeposit" alt="" coords="387,31,506,57"/>
+<area shape="rect" id="node4" href="$class_sales_record.html#aead1ad492c3bc48ac50f37a0de4991b0" title="SalesRecord::PushBack" alt="" coords="173,107,339,133"/>
+</map>

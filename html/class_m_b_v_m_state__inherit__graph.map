@@ -1,0 +1,5 @@
+<map id="MBVMState" name="MBVMState">
+<area shape="rect" id="node2" href="$class_m_b_v_m_state_available.html" title="MBVMStateAvailable" alt="" coords="5,80,152,107"/>
+<area shape="rect" id="node3" href="$class_m_b_v_m_state_making_coffee.html" title="MBVMStateMakingCoffee" alt="" coords="176,80,352,107"/>
+<area shape="rect" id="node4" href="$class_m_b_v_m_state_out_of_service.html" title="MBVMStateOutOfService" alt="" coords="376,80,549,107"/>
+</map>

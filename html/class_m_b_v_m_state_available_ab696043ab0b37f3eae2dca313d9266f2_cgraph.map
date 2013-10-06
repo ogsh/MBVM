@@ -1,0 +1,16 @@
+<map id="MBVMStateAvailable::Run" name="MBVMStateAvailable::Run">
+<area shape="rect" id="node2" href="$class_m_b_v_m_context.html#a6ce23a6845e52d6f03e865e05aa72030" title="MBVMContext::SetStatus" alt="" coords="237,44,411,71"/>
+<area shape="rect" id="node3" href="$class_m_b_v_m_context.html#a650568a5acadc4f5614a8fb9fae59db1" title="MBVMContext::SelectItem" alt="" coords="235,95,413,121"/>
+<area shape="rect" id="node8" href="$class_m_b_v_m_context.html#a6a4944d905aef4128602b9c86538b66d" title="MBVMContext::SupplyItem" alt="" coords="233,145,415,172"/>
+<area shape="rect" id="node10" href="$class_m_b_v_m_context.html#ac1e6231a6a60820f4592cacede840b32" title="MBVMContext::Pay" alt="" coords="255,196,393,223"/>
+<area shape="rect" id="node13" href="$class_m_b_v_m_context.html#a2f617cd9ba53d89838dfbca2e057a1f8" title="MBVMContext::Cancel" alt="" coords="245,247,403,273"/>
+<area shape="rect" id="node4" href="$class_sale.html#a919b0be2db04e22f021252c49ccc2d25" title="Sale::SelectItem" alt="" coords="467,69,586,96"/>
+<area shape="rect" id="node5" href="$class_pay.html#affb32e82d8300519bddb984d3bba351b" title="Pay::MakePayment" alt="" coords="651,5,789,32"/>
+<area shape="rect" id="node6" href="$class_pay.html#a047f5f92b907200a630e9c405bfa2c9b" title="Pay::GetDeposit" alt="" coords="851,107,970,133"/>
+<area shape="rect" id="node7" href="$class_sales_record.html#aead1ad492c3bc48ac50f37a0de4991b0" title="SalesRecord::PushBack" alt="" coords="637,107,803,133"/>
+<area shape="rect" id="node9" href="$class_sale.html#a2c38d65bd9adc9aaf942e996f0858508" title="Sale::SupplyItem" alt="" coords="465,145,588,172"/>
+<area shape="rect" id="node11" href="$class_sale.html#a04fae97949b831b03bd84f8770969281" title="Sale::DropInCoin" alt="" coords="465,196,589,223"/>
+<area shape="rect" id="node12" href="$class_pay.html#a2752b5617df287b29541bda193f2f9a5" title="Pay::AddDeposit" alt="" coords="659,208,781,235"/>
+<area shape="rect" id="node14" href="$class_sale.html#ae43ee965e09a7e4bb1e4ba6859c5c63c" title="Sale::Refund" alt="" coords="477,259,576,285"/>
+<area shape="rect" id="node15" href="$class_pay.html#a80b247589b1672d00aa62188389cf660" title="Pay::Refund" alt="" coords="672,309,768,336"/>
+</map>

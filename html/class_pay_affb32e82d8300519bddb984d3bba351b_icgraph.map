@@ -1,0 +1,5 @@
+<map id="Pay::MakePayment" name="Pay::MakePayment">
+<area shape="rect" id="node2" href="$class_sale.html#a919b0be2db04e22f021252c49ccc2d25" title="Sale::SelectItem" alt="" coords="193,5,311,32"/>
+<area shape="rect" id="node3" href="$class_m_b_v_m_context.html#a650568a5acadc4f5614a8fb9fae59db1" title="MBVMContext::SelectItem" alt="" coords="360,5,539,32"/>
+<area shape="rect" id="node4" href="$class_m_b_v_m_state_available.html#ab696043ab0b37f3eae2dca313d9266f2" title="MBVMStateAvailable::Run" alt="" coords="587,5,765,32"/>
+</map>

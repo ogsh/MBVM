@@ -1,0 +1,4 @@
+<map id="Recipe::HasSufficientIngredients" name="Recipe::HasSufficientIngredients">
+<area shape="rect" id="node2" href="$class_item.html#a2282ff1bb27300c436f8e2cc0549d745" title="Item::HasSufficientIngredients" alt="" coords="269,5,469,32"/>
+<area shape="rect" id="node3" href="$class_item.html#a28aac2ce58ba27af7ee8037b911711fb" title="Item::IsAvailable" alt="" coords="517,5,637,32"/>
+</map>

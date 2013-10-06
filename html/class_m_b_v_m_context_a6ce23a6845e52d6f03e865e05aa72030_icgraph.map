@@ -1,0 +1,5 @@
+<map id="MBVMContext::SetStatus" name="MBVMContext::SetStatus">
+<area shape="rect" id="node2" href="$class_m_b_v_m_state_available.html#ab696043ab0b37f3eae2dca313d9266f2" title="MBVMStateAvailable::Run" alt="" coords="241,5,420,32"/>
+<area shape="rect" id="node3" href="$class_m_b_v_m_state_out_of_service.html#ad98ff971d0882b1d252371eda7c1352e" title="MBVMStateOutOfService::Run" alt="" coords="228,56,433,83"/>
+<area shape="rect" id="node4" href="$class_m_b_v_m_state_making_coffee.html#a6a17c37552310083ee7312b791977873" title="MBVMStateMakingCoffee::Run" alt="" coords="227,107,434,133"/>
+</map>

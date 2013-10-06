@@ -1,0 +1,6 @@
+<map id="MBVMContext::SelectItem" name="MBVMContext::SelectItem">
+<area shape="rect" id="node2" href="$class_sale.html#a919b0be2db04e22f021252c49ccc2d25" title="Sale::SelectItem" alt="" coords="233,56,351,83"/>
+<area shape="rect" id="node3" href="$class_pay.html#affb32e82d8300519bddb984d3bba351b" title="Pay::MakePayment" alt="" coords="414,5,551,32"/>
+<area shape="rect" id="node4" href="$class_pay.html#a047f5f92b907200a630e9c405bfa2c9b" title="Pay::GetDeposit" alt="" coords="614,31,733,57"/>
+<area shape="rect" id="node5" href="$class_sales_record.html#aead1ad492c3bc48ac50f37a0de4991b0" title="SalesRecord::PushBack" alt="" coords="400,107,565,133"/>
+</map>

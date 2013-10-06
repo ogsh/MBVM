@@ -1,0 +1,9 @@
+<map id="MBVMContext::Run" name="MBVMContext::Run">
+<area shape="rect" id="node2" href="$class_m_b_v_m_state_available.html#ac233c51e80805b04e3d6458b5a3c2239" title="MBVMStateAvailable\l::GetInstance" alt="" coords="209,5,356,46"/>
+<area shape="rect" id="node3" href="$class_m_b_v_m_state_out_of_service.html#a50f1bf059c5edf54b13c2f88e8330e32" title="MBVMStateOutOfService\l::GetInstance" alt="" coords="196,70,369,111"/>
+<area shape="rect" id="node4" href="$class_m_b_v_m_state_making_coffee.html#aeee8ed3022c217b9f36a0a388c051473" title="MBVMStateMakingCoffee\l::GetInstance" alt="" coords="195,135,371,177"/>
+<area shape="rect" id="node5" href="$class_m_b_v_m_state.html#ab05a96a4131a6bacb5ec6028cb6d7136" title="MBVMState::Run" alt="" coords="220,201,345,228"/>
+<area shape="rect" id="node6" href="$class_maintenance.html#a228a7433f72a80989c53e5fe0bf39f8b" title="Maintenance::Maintain" alt="" coords="205,252,361,279"/>
+<area shape="rect" id="node7" href="$class_sale.html#addd3900b86d215cb8eccb2e82b43f1f9" title="Sale::DumpSales" alt="" coords="220,303,345,329"/>
+<area shape="rect" id="node8" href="$class_sales_record.html#acda87d2266a7e6a72eba9f18a9adc2ef" title="SalesRecord::Dump" alt="" coords="419,303,560,329"/>
+</map>

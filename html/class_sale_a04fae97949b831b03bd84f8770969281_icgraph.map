@@ -1,0 +1,4 @@
+<map id="Sale::DropInCoin" name="Sale::DropInCoin">
+<area shape="rect" id="node2" href="$class_m_b_v_m_context.html#ac1e6231a6a60820f4592cacede840b32" title="MBVMContext::Pay" alt="" coords="179,5,317,32"/>
+<area shape="rect" id="node3" href="$class_m_b_v_m_state_available.html#ab696043ab0b37f3eae2dca313d9266f2" title="MBVMStateAvailable::Run" alt="" coords="365,5,544,32"/>
+</map>

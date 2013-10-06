@@ -1,0 +1,4 @@
+<map id="Sale::DropInCoin" name="Sale::DropInCoin">
+<area shape="rect" id="node2" href="$class_pay.html#a2752b5617df287b29541bda193f2f9a5" title="Pay::AddDeposit" alt="" coords="179,5,301,32"/>
+<area shape="rect" id="node3" href="$class_pay.html#a047f5f92b907200a630e9c405bfa2c9b" title="Pay::GetDeposit" alt="" coords="181,56,299,83"/>
+</map>
