@@ -17,7 +17,7 @@ void MBVMContext::Run(int event_id, int value) {
                   MBVMStateMakingCoffee::GetInstance();
     this->state->Run(*this, event_id, value);
     this->maintenance.Maintain();
-//    this->sale.DumpSales("records.csv");
+    this->sale.DumpSales("records.csv");
 }
 
 void MBVMContext::SetStatus(MBVMStatus::typeID new_status) {

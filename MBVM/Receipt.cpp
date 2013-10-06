@@ -30,10 +30,7 @@ ostream& operator<<(ostream& os, const Receipt& obj) {
     os  << ",";
     
     os << obj.item.GetName() << ","
-    << obj.item.GetPrice()
-    << endl;
-    
-    
+    << obj.item.GetPrice();
     
     return os;
 }
