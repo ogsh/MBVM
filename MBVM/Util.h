@@ -74,6 +74,11 @@ public:
      */
     class Time {
     public:
+        /**
+         *  現在の日時を取得
+         *
+         *  @return 現在の日時
+         */
         static DATE GetNow() {
             time_t t = time(0);
             struct tm* now = localtime(&t);

@@ -18,9 +18,12 @@ using namespace std;
 
 class MBVMState;
 
+/**
+ *  MBVMの状態
+ */
 namespace MBVMStatus {
     /**
-     *  自動販売機の状態
+     *  MBVMの状態
      */
     enum typeID {
         AVAILABLE,          ///< 販売可能
@@ -29,6 +32,9 @@ namespace MBVMStatus {
     };
 };
 
+/**
+ *  イベントの種類
+ */
 namespace EventID {
     /**
      *  イベントの種類

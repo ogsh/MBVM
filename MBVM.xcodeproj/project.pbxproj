@@ -447,6 +447,7 @@
 				60B7E3E11800723900FC011E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

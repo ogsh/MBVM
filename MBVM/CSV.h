@@ -175,10 +175,10 @@ public:
     }
 
 private:
-    int rows;
-    int cols;
-    char delimiter;
-    vector<string> data;
+    int rows;               ///< CSV行数
+    int cols;               ///< CSV列数
+    char delimiter;         ///< 区切り文字
+    vector<string> data;    ///< CSV内データ
 
 };
 

@@ -11,7 +11,9 @@
 
 #include <iostream>
 
-
+/**
+ *  お金の種類
+ */
 namespace MoneyType {
     /**
      *  お金の種類
@@ -155,9 +157,9 @@ public:
     void SetCount(int count);
     
 private:
-    int value;      ///< 自身が持つお金の価格
+    int value;      ///< 自身が保持しているお金一個の価格
     int count;      ///< 自身が持つお金の数
-    int max_count;  ///< 最大保持することのできるお金の数
+    int max_count;  ///< 保持可能なお金の最大個数
 };
 
 #endif /* defined(__InterprocessCommunication__money_bag__) */
