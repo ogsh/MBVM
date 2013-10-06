@@ -32,7 +32,7 @@ int main(int argc, const char * argv[])
 
 void Test_context(MBVMContext& context) {
     string bar(35, '-');
-    const int max_num_itr = 100;
+    const int max_num_itr = 1000;
     int num_itr = 0;
     EventID::typeID events[] = {EventID::PAY, EventID::CANCEL, EventID::BUY, EventID::POWER};
     MoneyType::typeID moneys[] = {MoneyType::MONEY10, MoneyType::MONEY100, MoneyType::MONEY50, MoneyType::MONEY500};

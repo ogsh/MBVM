@@ -9,7 +9,7 @@
 #include "Pay.h"
 
 
-Pay::Pay() {
+Pay::Pay(int max_deposit) : max_deposit(max_deposit) {
     this->money_bags.insert(std::make_pair(MoneyType::MONEY500, MoneyBag(500, 50)));
     this->money_bags.insert(std::make_pair(MoneyType::MONEY100, MoneyBag(100, 50)));
     this->money_bags.insert(std::make_pair(MoneyType::MONEY50,  MoneyBag(50,  50)));
@@ -17,8 +17,15 @@ Pay::Pay() {
 }
 
 Pay& Pay::AddDeposit(MoneyType::typeID money_type) {
-    ++ this->money_bags[money_type];
-    std::cout << this->money_bags[money_type];
+    int deposit = this->GetDeposit();
+    if(deposit + static_cast<int>(money_type) > this->max_deposit) {
+        cout << "投入金額が" << max_deposit << "円を超えたので" << money_type << "円を払い戻します" << endl;
+        -- this->money_bags[money_type];
+    }
+    else {
+        ++ this->money_bags[money_type];
+        std::cout << this->money_bags[money_type];
+    }
     return *this;
 }
 

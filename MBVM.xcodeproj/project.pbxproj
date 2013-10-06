@@ -21,7 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		60156D3717FFC0B5001394E7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60156D3617FFC0B5001394E7 /* main.cpp */; };
+		60156D3717FFC0B5001394E7 /* s.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60156D3617FFC0B5001394E7 /* s.cpp */; };
 		60156D3917FFC0B5001394E7 /* MBVM.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60156D3817FFC0B5001394E7 /* MBVM.1 */; };
 		60156D4617FFD52B001394E7 /* MoneyBag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60156D4017FFD52B001394E7 /* MoneyBag.cpp */; };
 		60156D4717FFD52B001394E7 /* Pay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60156D4217FFD52B001394E7 /* Pay.cpp */; };
@@ -51,8 +51,8 @@
 
 /* Begin PBXFileReference section */
 		60156D3317FFC0B5001394E7 /* MBVM */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MBVM; sourceTree = BUILT_PRODUCTS_DIR; };
-		60156D3617FFC0B5001394E7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		60156D3817FFC0B5001394E7 /* MBVM.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = MBVM.1; sourceTree = "<group>"; };
+		60156D3617FFC0B5001394E7 /* s.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = s.cpp; path = MBVM/s.cpp; sourceTree = "<group>"; };
+		60156D3817FFC0B5001394E7 /* MBVM.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; name = MBVM.1; path = MBVM/MBVM.1; sourceTree = "<group>"; };
 		60156D3F17FFD52B001394E7 /* DaoRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaoRecipe.h; sourceTree = "<group>"; };
 		60156D4017FFD52B001394E7 /* MoneyBag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MoneyBag.cpp; sourceTree = "<group>"; };
 		60156D4117FFD52B001394E7 /* MoneyBag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyBag.h; sourceTree = "<group>"; };
@@ -95,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				60156D3517FFC0B5001394E7 /* MBVM */,
+				60156D3617FFC0B5001394E7 /* s.cpp */,
+				60156D3817FFC0B5001394E7 /* MBVM.1 */,
 				60156D3417FFC0B5001394E7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,14 +118,12 @@
 				60156D611800248A001394E7 /* MBVMContext */,
 				60156D5D18002416001394E7 /* MBVMState */,
 				60156D5817FFF3D1001394E7 /* Sale */,
-				60156D4D17FFD71E001394E7 /* IO */,
-				60156D4C17FFD711001394E7 /* Util */,
 				60156D4B17FFD546001394E7 /* Moneybag */,
 				60156D4A17FFD538001394E7 /* Pay */,
 				60156D5217FFEF62001394E7 /* Item */,
 				60156D4917FFD530001394E7 /* Recipe */,
-				60156D3617FFC0B5001394E7 /* main.cpp */,
-				60156D3817FFC0B5001394E7 /* MBVM.1 */,
+				60156D4C17FFD711001394E7 /* Util */,
+				60156D4D17FFD71E001394E7 /* IO */,
 			);
 			path = MBVM;
 			sourceTree = "<group>";
@@ -308,7 +308,7 @@
 				60156D4717FFD52B001394E7 /* Pay.cpp in Sources */,
 				60156D6018002429001394E7 /* MBVMState.cpp in Sources */,
 				60156D5B17FFF3DD001394E7 /* Sale.cpp in Sources */,
-				60156D3717FFC0B5001394E7 /* main.cpp in Sources */,
+				60156D3717FFC0B5001394E7 /* s.cpp in Sources */,
 				60B7E3F41800D1AC00FC011E /* Receipt.cpp in Sources */,
 				60156D4617FFD52B001394E7 /* MoneyBag.cpp in Sources */,
 				60156D4817FFD52B001394E7 /* Recipe.cpp in Sources */,

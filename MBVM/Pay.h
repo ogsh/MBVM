@@ -25,7 +25,7 @@ public:
     /**
      *  デフォルトコンストラクタ
      */
-    Pay();
+    Pay(int max_deposit = 999);
     
     /**
      *  硬貨を預かり金に投入する
@@ -58,6 +58,7 @@ public:
     void Refund();
     
 private:
+    int max_deposit;
     map<MoneyType::typeID, MoneyBag, greater<MoneyType::typeID>> money_bags;
 };
 
