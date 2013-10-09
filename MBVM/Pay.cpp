@@ -18,14 +18,14 @@ Pay::Pay(int max_deposit) : max_deposit(max_deposit) {
 
 Pay& Pay::AddDeposit(MoneyType::typeID money_type) {
     int deposit = this->GetDeposit();
+    ++ this->money_bags[money_type];
+    cout << this->money_bags[money_type];
+
     if(deposit + static_cast<int>(money_type) > this->max_deposit) {
         cout << "投入金額が" << max_deposit << "円を超えたので" << money_type << "円を払い戻します" << endl;
         -- this->money_bags[money_type];
     }
-    else {
-        ++ this->money_bags[money_type];
-        std::cout << this->money_bags[money_type];
-    }
+
     return *this;
 }
 
