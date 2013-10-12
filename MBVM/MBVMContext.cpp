@@ -8,7 +8,9 @@
 
 #include "MBVMContext.h"
 
-MBVMContext::MBVMContext(MBVMStatus::typeID status, MBVMState* state) : status(status), state(state), maintenance(Maintenance(this->sale)) {
+using namespace mbvm;
+
+MBVMContext::MBVMContext(MBVMStatus status, MBVMState* state) : status(status), state(state), maintenance(Maintenance(this->sale)) {
 }
 
 void MBVMContext::Run(int event_id, int value) {
@@ -20,24 +22,28 @@ void MBVMContext::Run(int event_id, int value) {
     this->sale.DumpSales("records.csv");
 }
 
-void MBVMContext::SetStatus(MBVMStatus::typeID new_status) {
+void MBVMContext::SetStatus(MBVMStatus new_status) {
     this->status = new_status;
 }
 
-MBVMStatus::typeID MBVMContext::GetStatus() const {
+MBVMStatus MBVMContext::GetStatus() const {
     return this->status;
 }
 
-void MBVMContext::Pay(MoneyType::typeID money_type) {
+void MBVMContext::Pay(MoneyType money_type) {
     this->sale.DropInCoin(money_type);
 }
 
-bool MBVMContext::SelectItem(CoffeeType::typeID coffee_type) {
+bool MBVMContext::SelectItem(CoffeeType coffee_type) {
     return this->sale.SelectItem(coffee_type);
 }
 
-void MBVMContext::SupplyItem(CoffeeType::typeID coffee_type) {
+void MBVMContext::SupplyItem(CoffeeType coffee_type) {
     this->sale.SupplyItem(coffee_type);
+}
+
+int MBVMContext::SupplyItem() {
+    return this->sale.SupplyItem();
 }
 
 void MBVMContext::Cancel() {

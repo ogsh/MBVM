@@ -16,16 +16,17 @@ Sale::Sale() {
 
 
 void Sale::ShowItems() {
-    map<CoffeeType::typeID, Item>::iterator itr = this->items.begin();
+    map<CoffeeType, Item>::iterator itr = this->items.begin();
     for(; itr != this->items.end(); ++itr) {
         cout << itr->second;
     }
 }
 
-bool Sale::SelectItem(CoffeeType::typeID coffee_type) {
+bool Sale::SelectItem(CoffeeType coffee_type) {
     bool res = false;
 
     if(this->items[coffee_type].IsAvailable()) {
+        this->items[coffee_type].isSelected = true;
         this->pay.MakePayment(this->items[coffee_type].GetPrice());
         this->record.PushBack(this->items[coffee_type]);
         cout << this->items[coffee_type].GetName() << "を買いました\t" << "残金：" << this->pay.GetDeposit() << endl;
@@ -38,11 +39,23 @@ bool Sale::SelectItem(CoffeeType::typeID coffee_type) {
     return res;
 }
 
-void Sale::SupplyItem(CoffeeType::typeID coffee_type) {
+int Sale::SupplyItem() {
+    int progress = -1;
+    map<CoffeeType, Item>::iterator itr = this->items.begin();
+    for(; itr != this->items.end(); ++itr) {
+        if(itr->second.isSelected) {
+            progress = itr->second.Supply();
+            break;
+        }
+    }
+    return progress;
+}
+
+void Sale::SupplyItem(CoffeeType coffee_type) {
     this->items[coffee_type].Supply();
 }
 
-void Sale::DropInCoin(MoneyType::typeID money_type) {
+void Sale::DropInCoin(MoneyType money_type) {
     this->pay.AddDeposit(money_type);
     cout << "投入金額:" << this->pay.GetDeposit() << endl;
 }
@@ -61,7 +74,7 @@ void Sale::DumpSales(const string& filepath) {
 }
 
 
-const map<CoffeeType::typeID, Item>& Sale::GetItems() const {
+const map<CoffeeType, Item>& Sale::GetItems() const {
     return this->items;
 }
 

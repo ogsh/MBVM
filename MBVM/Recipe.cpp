@@ -8,11 +8,13 @@
 
 #include "Recipe.h"
 
-Recipe::Recipe(CoffeeType::typeID coffee_type) : recipe_info(DaoRecipe::Get(coffee_type)) {
+using namespace mbvm;
+
+Recipe::Recipe(CoffeeType coffee_type) : recipe_info(DaoRecipe::Get(coffee_type)), progress(0) {
     
 }
 
-Recipe::Recipe(const Recipe& obj) : recipe_info(obj.recipe_info) {
+Recipe::Recipe(const Recipe& obj) : recipe_info(obj.recipe_info), progress(0) {
     
 }
 
@@ -21,10 +23,35 @@ Recipe& Recipe::operator=(const Recipe& obj) {
     return *this;
 }
 
-void Recipe::Make() {
-    cout << "できました" << endl;
+int Recipe::Make() {
+    switch (this->progress) {
+        case 0:
+            cout << "水排出中" << endl;
+            this->progress ++;
+            break;
+        case 1:
+            cout << "ミルク排出中" << endl;
+            this->progress ++;
+        case 2:
+            cout << "砂糖排出中" << endl;
+            this->progress ++;
+        case 3:
+            cout << "コーヒードリップ中" << endl;
+            this->progress ++;
+        case 4:
+            cout << "コーヒー完成" << endl;
+            this->progress = 0;
+        default:
+            break;
+    }
+    
+    return this->progress;
 }
 
 bool Recipe::HasSufficientIngredients() const {
     return true;
+}
+
+int Recipe::GetProgress() const {
+    return this->progress;
 }

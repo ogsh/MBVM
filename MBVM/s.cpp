@@ -13,6 +13,7 @@
 #include "MBVMContext.h"
 
 using namespace std;
+using namespace mbvm;
 
 void Test_csv(const string& fname);
 void Test_case1();
@@ -34,13 +35,13 @@ void Test_context(MBVMContext& context) {
     string bar(35, '-');
     const int max_num_itr = 1000;
     int num_itr = 0;
-    EventID::typeID events[] = {EventID::PAY, EventID::CANCEL, EventID::BUY, EventID::POWER};
-    MoneyType::typeID moneys[] = {MoneyType::MONEY10, MoneyType::MONEY100, MoneyType::MONEY50, MoneyType::MONEY500};
-    CoffeeType::typeID coffees[] = {CoffeeType::MARUKO, CoffeeType::SPECIAL, CoffeeType::CAPPUCCINO};
+    EventID events[] = {EventID::PAY, EventID::CANCEL, EventID::BUY, EventID::POWER};
+    MoneyType moneys[] = {MoneyType::MONEY10, MoneyType::MONEY100, MoneyType::MONEY50, MoneyType::MONEY500};
+    CoffeeType coffees[] = {CoffeeType::MARUKO, CoffeeType::SPECIAL, CoffeeType::CAPPUCCINO};
     
-    int events_size = sizeof(events) / sizeof(EventID::typeID);
-    int moneys_size = sizeof(moneys) / sizeof(MoneyType::typeID);
-    int coffees_size = sizeof(coffees) / sizeof(CoffeeType::typeID);
+    int events_size = sizeof(events) / sizeof(EventID);
+    int moneys_size = sizeof(moneys) / sizeof(MoneyType);
+    int coffees_size = sizeof(coffees) / sizeof(CoffeeType);
     
     while(num_itr++ < max_num_itr) {
         const int max_num_event = 2;
@@ -74,7 +75,7 @@ void Test_case1() {
     
     sale.ShowItems();
 
-    MoneyType::typeID moneys[] = {
+    MoneyType moneys[] = {
         MoneyType::MONEY10,
         MoneyType::MONEY500,
         MoneyType::MONEY500,
@@ -82,7 +83,7 @@ void Test_case1() {
         MoneyType::MONEY100,
     };
     
-    for(int i=0; i < sizeof(moneys) / sizeof(MoneyType::typeID); ++i) {
+    for(int i=0; i < sizeof(moneys) / sizeof(MoneyType); ++i) {
         sale.DropInCoin(moneys[i]);
     }
     

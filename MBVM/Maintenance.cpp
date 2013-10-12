@@ -8,6 +8,8 @@
 
 #include "Maintenance.h"
 
+using namespace mbvm;
+
 Maintenance::Maintenance(const Sale& sale) : sale(sale) {
 }
 
@@ -42,7 +44,7 @@ bool Maintenance::CheckCoinPool() {
 
 bool Maintenance::CheckIngredients() {
     bool res = false;
-    map<CoffeeType::typeID, Item>::const_iterator itr = this->sale.GetItems().begin();
+    map<CoffeeType, Item>::const_iterator itr = this->sale.GetItems().begin();
     
     for(; itr != this->sale.GetItems().end(); ++itr) {
         if(itr->second.HasSufficientIngredients()) {

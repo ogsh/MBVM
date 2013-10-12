@@ -8,15 +8,25 @@
 
 #include "Item.h"
 
-Item::Item(CoffeeType::typeID coffee_type, const string& name, int price, const Pay& pay) :
-coffee_type(coffee_type), name(name), price(price), recipe(Recipe(coffee_type)), pay(pay) {
+Item::Item(CoffeeType coffee_type, const string& name, int price, const Pay& pay) :
+isSelected(false), coffee_type(coffee_type), name(name), price(price), recipe(Recipe(coffee_type)), pay(pay) {
     
 }
 
 int Item::Supply() {
-    cout << this->name << "をつくります．";
-    this->recipe.Make();
-    return 0;
+    if(this->recipe.GetProgress() == 0) {
+        cout << this->name << "をつくります" << endl;
+    }
+    else {
+        cout << this->name << "を作ってます" << endl;
+    }
+    int progress = this->recipe.Make();
+    
+    if(progress == 0) {
+        this->isSelected = false;
+    }
+    
+    return progress;
 }
 
 bool Item::IsAvailable() const {
@@ -25,6 +35,10 @@ bool Item::IsAvailable() const {
 
 bool Item::HasSufficientIngredients() const {
     return this->recipe.HasSufficientIngredients();
+}
+
+int Item::GetProgress() const {
+    return this->recipe.GetProgress();
 }
 
 int Item::GetPrice() const {

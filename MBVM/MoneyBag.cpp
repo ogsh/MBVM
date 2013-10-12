@@ -8,6 +8,8 @@
 
 #include "MoneyBag.h"
 
+using namespace mbvm;
+
 MoneyBag::MoneyBag(int value, int max_count) : value(value), count(0), max_count(max_count) {
 }
 
@@ -82,7 +84,7 @@ bool MoneyBag::operator>(const MoneyBag& obj) const {
     return this->count > obj.count;
 }
 
-std::ostream& operator<<(std::ostream& os, const MoneyBag& obj) {
+std::ostream& mbvm::operator<<(std::ostream& os, const MoneyBag& obj) {
     os << "pay[" << obj.value << "]" << "\t" << obj.count << " /" << obj.max_count << std::endl;
     return os;
 }

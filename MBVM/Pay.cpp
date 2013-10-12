@@ -8,6 +8,7 @@
 
 #include "Pay.h"
 
+using namespace mbvm;
 
 Pay::Pay(int max_deposit) : max_deposit(max_deposit) {
     this->money_bags.insert(std::make_pair(MoneyType::MONEY500, MoneyBag(500, 50)));
@@ -16,7 +17,7 @@ Pay::Pay(int max_deposit) : max_deposit(max_deposit) {
     this->money_bags.insert(std::make_pair(MoneyType::MONEY10,  MoneyBag(10,  50)));
 }
 
-Pay& Pay::AddDeposit(MoneyType::typeID money_type) {
+Pay& Pay::AddDeposit(MoneyType money_type) {
     int deposit = this->GetDeposit();
     ++ this->money_bags[money_type];
     cout << this->money_bags[money_type];
@@ -38,7 +39,7 @@ bool Pay::MakePayment(int price) {
     
     deposit -= price;
     
-    map<MoneyType::typeID, MoneyBag>::iterator itr = this->money_bags.begin();
+    map<MoneyType, MoneyBag>::iterator itr = this->money_bags.begin();
     for(itr = this->money_bags.begin(); itr != this->money_bags.end(); ++itr) {
         int required_coins = deposit / itr->second.GetValue();
         itr->second.SetCount(required_coins);
@@ -50,7 +51,7 @@ bool Pay::MakePayment(int price) {
 
 
 void Pay::Refund() {
-    map<MoneyType::typeID, MoneyBag>::iterator itr = this->money_bags.begin();
+    map<MoneyType, MoneyBag>::iterator itr = this->money_bags.begin();
     for(; itr != this->money_bags.end(); ++itr) {
         while(itr->second.GetCount() > 0) {
             --itr->second;
@@ -60,7 +61,7 @@ void Pay::Refund() {
 
 int Pay::GetDeposit() const {
     int deposit = 0;
-    map<MoneyType::typeID, MoneyBag>::const_iterator itr = this->money_bags.begin();
+    map<MoneyType, MoneyBag>::const_iterator itr = this->money_bags.begin();
 
     for(; itr != this->money_bags.end(); ++itr) {
         deposit += itr->second.AmountOfMoney();

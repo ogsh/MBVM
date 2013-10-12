@@ -23,13 +23,13 @@ void MBVMStateAvailable::Run(MBVMContext& context, int event_id, int value) {
             context.SetStatus(MBVMStatus::OUT_OF_SERVICE);
             break;
         case EventID::BUY:
-            if(context.SelectItem(static_cast<CoffeeType::typeID>(value))) {
+            if(context.SelectItem(static_cast<CoffeeType>(value))) {
                 context.SetStatus(MBVMStatus::MAKING_COFFEE);
-                context.SupplyItem(static_cast<CoffeeType::typeID>(value));
+//                context.SupplyItem(static_cast<CoffeeType>(value));
             }
             break;
         case EventID::PAY:
-            context.Pay(static_cast<MoneyType::typeID>(value));
+            context.Pay(static_cast<MoneyType>(value));
             break;
         case EventID::CANCEL:
             context.Cancel();
@@ -64,5 +64,16 @@ MBVMState* MBVMStateMakingCoffee::GetInstance() {
 }
 
 void MBVMStateMakingCoffee::Run(MBVMContext& context, int event_id, int value) {
-    context.SetStatus(MBVMStatus::AVAILABLE);
+    switch (event_id) {
+        case EventID::CANCEL:
+            context.Cancel();
+            break;
+            
+        default:
+            break;
+    }
+    
+    if(context.SupplyItem() == 0) {
+        context.SetStatus(MBVMStatus::AVAILABLE);
+    }
 }

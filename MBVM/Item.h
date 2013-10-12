@@ -14,16 +14,19 @@
 #include "Pay.h"
 
 using namespace std;
+using namespace mbvm;
 
 /**
  *  商品
  */
 class Item {
 public:
+    bool isSelected;
+    
     /**
      *  コンストラクタ
      */
-    Item(CoffeeType::typeID coffee_type = CoffeeType::MARUKO, const string& name = "", int price = 0, const Pay& pay = Pay());
+    Item(CoffeeType coffee_type = CoffeeType::MARUKO, const string& name = "", int price = 0, const Pay& pay = Pay());
 
     /**
      *  出力用シフト演算子オーバーロード
@@ -81,14 +84,22 @@ public:
      *  @return 商品価格
      */
     int GetPrice() const;
+
+    /**
+     *  コーヒー作成の進行度合いを返す
+     *
+     *  @return コーヒー作成の進行度合い
+     */
+    int GetProgress() const;
     
     
 private:
-    CoffeeType::typeID coffee_type;
+    CoffeeType coffee_type;
     string name;
     int price;
     Recipe recipe;
     const Pay& pay;
+    
 };
 
 #endif /* defined(__MBVM__Item__) */

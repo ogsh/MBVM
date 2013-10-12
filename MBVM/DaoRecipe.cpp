@@ -8,4 +8,6 @@
 
 #include "DaoRecipe.h"
 
-map<CoffeeType::typeID, RECIPE_INFO> DaoRecipe::recipe_info;
+using namespace mbvm;
+
+map<CoffeeType, RECIPE_INFO> DaoRecipe::recipe_info;
